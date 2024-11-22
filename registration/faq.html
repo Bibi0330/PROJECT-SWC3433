@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Dessert Shop - Menu</title>
+    <link href="https://fonts.google.com/share?selection.family=Arvo:ital,wght@0,400;0,700;1,400;1,700" rel="stylesheet">
+    <link href="https://fonts.google.com/share?selection.family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <style>
+    /* Global Body Style */
+body {
+    margin: 0;
+    font-family: 'Arvo', serif;
+    background-color: #fff1f4;
+    color: #5c5c5c;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #af077f;
+    border-bottom: 3px solid #ffa3b1;
+}
+
+.header .logo img {
+    max-height: 80px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #ff8fa3;
+    color: white;
+    border-radius: 5px;
+}
+
+/* FAQ Section */
+.faq-section {
+    max-width: 800px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center content horizontally */
+    margin: 30px auto; /* Center the section on the page */
+    border: 1px solid #ff80ab; /* Soft border color */
+    background: linear-gradient(145deg, #ff8fa3, #ffd6e0); /* Subtle gradient background */
+}
+
+.faq-section h1 {
+    font-family: 'Caveat Brush';
+    font-size: 36px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase; /* Makes the title stand out */
+    letter-spacing: 2px; /* Adds spacing between letters */
+}
+
+.faq-section p {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+/* FAQ Items */
+.faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the FAQ items horizontally */
+    gap: 20px;
+}
+
+.faq-item {
+    width: 100%;
+    max-width: 600px; /* Ensure the FAQ items don't stretch too wide */
+    border-bottom: 2px solid #ffffff; /* Soft bottom border for each FAQ item */
+    padding-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: scale(1.02); /* Subtle zoom effect on hover */
+}
+
+.faq-item h2 {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center; /* Center the question text */
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item h2:hover {
+    color: #e47c5d;
+    background-color: rgba(255, 143, 163, 0.2); /* Soft highlight on hover */
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 5px;
+    display: none; /* initially hidden */
+    text-align: center; /* Center the answer text */
+    padding: 10px;
+    background-color: #ffecf1;
+    border-radius: 8px;
+    transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+}
+
+.faq-item h2:hover + p {
+    max-height: 1000px; /* Expand the answer smoothly on hover */
+    padding: 15px;
+}
+
+.faq-item.active p {
+    display: block; /* show answer on active */
+    background-color: #ffe0e5; /* Slightly deeper color when expanded */
+}
+
+</style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="Project.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.php">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">Faq</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="faq-section">
+        <h1>FAQs</h1>
+        <p>Got questions? We've got answers.</p>
+    
+        <div class="faq">
+            <div class="faq-item">
+                <h2>How do I place an order?</h2>
+                <p>Ordering is easy! Browse our menu, add your favorite desserts to the cart, and check out online. You can also call us to place an order.</p>
+            </div>
+    
+            <div class="faq-item">
+                <h2>Do you offer gluten-free or vegan options?</h2>
+                <p>Yes, we have gluten-free and vegan options available for several of our desserts. Please contact us to confirm availability.</p>
+            </div>
+    
+            <div class="faq-item">
+                <h2>How do I customize a dessert?</h2>
+                <p>You can contact us directly to discuss your customization needs. We’ll work with you to make your dessert unique and special.</p>
+            </div>
+    
+            <div class="faq-item">
+                <h2>What payment methods do you accept?</h2>
+                <p>We accept credit cards, debit cards, and online payment options for your convenience.</p>
+            </div>
+    
+            <div class="faq-item">
+                <h2>Can I cancel my order?</h2>
+                <p>Cancellations are accepted up to 24 hours before the scheduled pickup or delivery time. Please contact us as soon as possible to cancel or modify your order.</p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // JavaScript to make FAQ items expandable
+        document.querySelectorAll('.faq-item h2').forEach(question => {
+            question.addEventListener('click', () => {
+                // Toggle the 'active' class on the parent .faq-item
+                question.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+    
+    </body>
+    </html>

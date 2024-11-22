@@ -1,0 +1,56 @@
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: 'Arvo', serif;
+            background-color: #fff1f4;
+            color: #5c5c5c;
+            line-height: 1.6;
+        }
+        
+        /* Header Section */
+        body {
+                    margin: 0;
+                    font-family: 'Arvo', serif;
+                    background-color: #fff1f4;
+                    color: #5c5c5c;
+                    line-height: 1.6;
+                }
+                
+                /* Header Section */
+                .header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 15px 30px;
+                    background-color: #af077f;
+                    border-bottom: 3px solid #ffa3b1;
+                }
+                
+                .header .logo img {
+                    max-height: 80px;
+                }
+                
+                .navbar ul {
+                    list-style: none;
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                .navbar ul li {
+                    margin-left: 20px;
+                }
+                
+                .navbar ul li a {
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: bold;
+                    padding: 5px 10px;
+                    transition: all 0.3s ease;
+                }
+                
+                .navbar ul li a:hover {
+                    background-color: #ff8fa3;
+                    color: white;
+                    border-radius: 5px;
+                }

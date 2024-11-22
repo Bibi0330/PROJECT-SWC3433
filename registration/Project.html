@@ -1,0 +1,404 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Dessert Shop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: 'Arvo', serif;
+        background-color: #fef9f4;
+        color: #333;
+        line-height: 1.6;
+    }
+    
+    /* Header Section */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 30px;
+        background-color: #af077f;
+        border-bottom: 2px solid #ffb6c1;
+    }
+    
+    .logo img {
+        width: 120px;
+    }
+    
+    .navbar ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+    }
+    
+    .navbar ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #fff;
+        font-size: 20px;
+        transition: color 0.3s ease-in-out;
+    }
+    
+    .navbar ul li a:hover {
+        color: #ff69b4;
+    }
+    
+    .login-btn {
+        padding: 8px 16px;
+        background-color: #ff69b4;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 14px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    .login-btn:hover {
+        background-color: #ff1493;
+    }
+    
+    /* Hero Section */
+    .hero {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(to bottom, #ffb6c1, #ffe4e1);
+        color: #af077f;
+        font-family: 'Caveat Brush', cursive;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .cta-btn {
+        padding: 12px 20px;
+        background-color: #ff69b4;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    .cta-btn:hover {
+        background-color: #ff1493;
+    }
+    
+    /* Best Seller Section */
+    .best-seller {
+        text-align: center;
+        padding: 40px 20px;
+        background-color: #fffaf0;
+    }
+    
+    .best-seller h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        font-family: 'Fruktur', serif;
+        color: #ff69b4;
+    }
+    
+    .desserts {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .dessert-item {
+    background-color: #ffb5e3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.dessert-item:hover {
+    transform: scale(1.05); /* Enlarges the whole frame */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Adds a deeper shadow for effect */
+}
+
+.dessert-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dessert-item:hover img {
+    transform: scale(1.05); /* Slightly enlarges the image separately */
+}
+
+    
+    .dessert-item h3 {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+    
+    .dessert-item p {
+        font-size: 0.9rem;
+        color: #555;
+    }
+    
+    .rating {
+        font-size: 1rem;
+        color: #ff8c00;
+    }
+    
+    .order-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #ff69b4;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    .order-btn:hover {
+        background-color: #ff1493;
+    }
+    
+    /* Footer Section */
+    .footer {
+        background-color: #ffe4e1;
+        padding: 20px;
+        text-align: center;
+        border-top: 2px solid #ffb6c1;
+        font-size: 0.9rem;
+    }
+    
+    .footer-info p {
+        margin: 10px 0;
+    }
+    
+    .footer-links {
+        margin: 10px 0;
+    }
+    
+    .footer-links a {
+        text-decoration: none;
+        color: #333;
+        margin: 0 10px;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+    
+    .footer-links a:hover {
+        color: #ff69b4;
+    }
+    
+    .social-icons img {
+        width: 24px;
+        margin: 0 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .social-icons img:hover {
+        transform: scale(1.1);
+    }
+    
+    .copyright {
+        margin-top: 10px;
+        font-size: 0.8rem;
+        color: #888;
+    }
+    
+    /* Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        max-width: 400px;
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .modal-content {
+        position: relative;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .modal-content label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    .modal-content input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .submit-btn {
+        padding: 10px 20px;
+        background-color: #ff69b4;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    .submit-btn:hover {
+        background-color: #ff1493;
+    }
+    
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #333;
+    }</style>
+    <script>
+        // Use a simpler approach to set the variable in JavaScript without embedding PHP logic directly inside
+        var isLoggedIn = "<?php echo isset($_SESSION['username']) ? 'true' : 'false'; ?>";
+        isLoggedIn = (isLoggedIn === 'true'); // Convert string to boolean
+    </script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="Project.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.php">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">Faq</a></li>
+            </ul>
+        </nav>
+        <?php if (!isset($_SESSION['username'])): ?>
+        <a href="http://localhost/registration/admin_login.php" class="login-btn" title="Admin Access Only" onclick="showLoginModal()">Admin Login</a>
+    <?php endif; ?>
+    
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Fantasy Dessert Shop</h1>
+            <p>Your destination for whimsical and delightful sweet treats!</p>
+            <a href="http://localhost/registration/menu.php" class="cta-btn">Explore Our Menu</a>
+        </div>
+    </section>
+    
+
+<!-- Best Seller Dessert Section -->
+<section class="best-seller">
+    <h2>Best Seller Desserts</h2>
+    <div class="desserts">
+        <div class="dessert-item">
+            <img src="Mystic-Moon-Galaxy-Cupcakes.jpg" alt="Dessert 1">
+            <h3>Mystic Moon Galaxy Cupcake</h3>
+            <p>Purple, yellow, and green coloured, bubble gum, grape, and banana flavoured vanilla cupcakes with the same coloured and flavoured frosting on top with a bright pink chocolate sphere.</p>
+            <p class="rating">★★★★☆ (200 reviews)</p>
+            <!-- Updated Order Now Button -->
+            <a href="menu.php" class="order-btn">Order Now</a>
+        </div>
+        <div class="dessert-item">
+            <img src="pinkpeppermint.webp" alt="Dessert 2">
+            <h3>Pink Peppermint Ice Cream</h3>
+            <p>A fluffy vanilla cupcake topped with vibrant rainbow frosting and a whimsical unicorn horn, delivering a magical and delightful treat. A swirl of pink and white peppermint with white chocolate freckles.</p>
+            <p class="rating">★★★★★ (150 reviews)</p>
+            <!-- Updated Order Now Button -->
+            <a href="menu.php" class="order-btn">Order Now</a>
+        </div>
+        <div class="dessert-item">
+            <img src="FERRERO-ROCHER-CAKE-WEB-03.jpg" alt="Dessert 3">
+            <h3>Ferrero Rocher Cake</h3>
+            <p>Silky chocolate ganache, covered in crunchy toasted hazelnuts and draped in my glossy one-bowl chocolate sauce.</p>
+            <p class="rating">★★★★☆ (180 reviews)</p>
+            <!-- Updated Order Now Button -->
+            <a href="menu.php" class="order-btn">Order Now</a>
+        </div>
+    </div>
+</section>
+
+    
+
+<!-- Admin Login Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeLoginModal()">&times;</span>
+        <h2>Admin Login</h2>
+        <form id="loginForm" action="admin_login.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+    </div>
+</div>
+
+
+    <footer class="footer">
+        <div class="footer-info">
+            <p>Contact Us: jucchydessert@gmail.com | +601-281 6121</p>
+            <p>B-10-1, Shamelin Bestari Condominium, 56100, Kuala Lumpur</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Sitemap</a>
+        </div>
+        <div class="social-media">
+            <p>Follow us:</p>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank"><img src="igg.png" alt="Instagram"></a>
+                <a href="https://facebook.com" target="_blank"><img src="fbb.png" alt="Facebook"></a>
+                <a href="https://whatsapp.com" target="_blank"><img src="ws.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 Fantasy Dessert Shop. All Rights Reserved.</p>
+        </div>
+    </footer>    
+    <script src="scripts.js"></script>
+</body>
+</html>

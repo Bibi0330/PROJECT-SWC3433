@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Dessert Shop</title>
+    <link href="https://fonts.google.com/share?selection.family=Arvo:ital,wght@0,400;0,700;1,400;1,700" rel="stylesheet">
+    <link href="https://fonts.google.com/share?selection.family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fruktur:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
+    <style>/* Global Body Style */
+        body {
+            margin: 0;
+            font-family: 'Arvo', serif;
+            background-color: #fff1f4;
+            color: #5c5c5c;
+            line-height: 1.6;
+        }
+        
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #af077f;
+            border-bottom: 3px solid #ffa3b1;
+        }
+        
+        .header .logo img {
+            max-height: 80px;
+        }
+        
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar ul li {
+            margin-left: 20px;
+        }
+        
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar ul li a:hover {
+            background-color: #ff8fa3;
+            color: white;
+            border-radius: 5px;
+        }
+        
+        .gallery {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.gallery h1 {
+    font-family: 'Caveat Brush', cursive;
+    font-size: 36px;
+    color: #b84c65;
+    margin-bottom: 10px;
+}
+
+.gallery .intro {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item::after {
+    content: 'View Details';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+        </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="Project.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.php">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="faq.html">Faq</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <body>
+        <section class="gallery">
+            <h1>Our Magical Creations</h1>
+            <p class="intro">Step into our gallery and explore a world of whimsical, delicious delights crafted with fantasy and creativity!</p>
+            
+            <div class="gallery-grid">
+                <!-- Replace 'image1.jpg', 'image2.jpg', etc. with the paths to your images -->
+                <div class="gallery-item"><img src="gl1.jpg" alt="Dessert 1"></div>
+                <div class="gallery-item"><img src="gl2.jpg" alt="Dessert 2"></div>
+                <div class="gallery-item"><img src="gl3.jpg" alt="Dessert 3"></div>
+                <div class="gallery-item"><img src="gl4.webp" alt="Dessert 4"></div>
+                <div class="gallery-item"><img src="gl5.webp" alt="Dessert 5"></div>
+                <div class="gallery-item"><img src="gl6.webp" alt="Dessert 6"></div>
+                <div class="gallery-item"><img src="gl7.webp" alt="Dessert 7"></div>
+                <div class="gallery-item"><img src="gl8.jpg" alt="Dessert 8"></div>
+                <div class="gallery-item"><img src="gl9.jpg" alt="Dessert 9"></div>
+            </div>
+        </section>
+    </body>
+    </html>

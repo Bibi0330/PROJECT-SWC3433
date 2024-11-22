@@ -1,0 +1,63 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Fantasy Dessert Shop</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .thank-you-message {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-family: 'Caveat Brush', cursive;
+            font-size: 36px;
+            color: #b84c65;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #9a4051;
+            color: white;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: #ffe600;
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-message">
+        <h1>Thank You for Your Order!</h1>
+        <p>Your order has been successfully placed. We will begin processing your order shortly.</p>
+        <p>We hope to serve you again soon!</p>
+        <a href="http://localhost/registration/menu.php">Back to Menu</a>
+    </div>
+</body>
+</html>
